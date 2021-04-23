@@ -4,8 +4,8 @@ https://uselessfacts.jsph.pl/
 
 ## Api Endpoints
 
-- /random.format?language=lg 
-- /today.format?language=lg
+- /random.format?language=lg (updates on every request)
+- /today.format?language=lg (updates every 24h)
 
 Where 
 - format: json, html, txt and md (default is html)
