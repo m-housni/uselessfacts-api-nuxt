@@ -2,22 +2,41 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        randomfacts-api
-      </h1>
       <h2 class="subtitle">
+        I didn't say that, it came from <a href="https://uselessfacts.jsph.pl/" class="underline">RandomfactsApi</a> :-) 
+      </h2>
+      <h2 class="title">
         {{ phrase }}
       </h2>
+      <div class="links">
+        <button @click="nextFact" :class="btnClass">Next fact <fa :icon="['fas', 'laugh-wink']"/></button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+
+import axios from 'axios'
+
 export default {
-  data: () => {
+  data() {
     return {
-      phrase: "default random fact"
+      phrase: "default random fact",
+      btnClass: 'bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded',
     }
+  },
+  methods: {
+    nextFact() {
+      axios.get('https://uselessfacts.jsph.pl/random.json?language=en')
+      .then( response =>  {
+        console.log(response)
+        this.phrase = response.data.text
+      })
+    }
+  },
+  mounted() {
+    this.nextFact()
   }
 }
 </script>
@@ -50,7 +69,7 @@ export default {
     sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 60PX;
   color: #35495e;
   letter-spacing: 1px;
 }

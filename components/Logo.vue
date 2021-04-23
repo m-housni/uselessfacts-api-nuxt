@@ -1,16 +1,17 @@
 <template>
-  <img src="../assets/mypic.png" alt="" class="NuxtLogo">
+  <div>
+    <img src="../assets/mypic.png" alt="" class="logo">
+    <MySocialMedia />
+  </div>
 </template>
 
 <style>
-.NuxtLogo {
+.logo {
   animation: 3s appear;
   margin: auto;
   border-radius: 50%;
   height: 128px;
-  border: 5px blue solid;
 }
-
 @keyframes appear {
   0% {
     opacity: 0;
