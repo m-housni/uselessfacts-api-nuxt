@@ -1,7 +1,7 @@
 <template>
   <span class="fa-size">
-    <fa :icon="['fab', 'linkedin']"/>
-    <fa :icon="['fab', 'github']"/>
+    <a href="https://linkedin.com/in/m-housni"><fa :icon="['fab', 'linkedin']"/></a>
+    <a href="https://github.com/m-housni"><fa :icon="['fab', 'github']"/></a>
   </span>
 </template>
 

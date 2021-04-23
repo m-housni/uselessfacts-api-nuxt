@@ -7,7 +7,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'randomfacts-api',
+    title: 'RandomFacts-api with Nuxt',
+    description: 'tailwind, fontawesome, components, axios',
     htmlAttrs: {
       lang: 'en'
     },
@@ -17,7 +18,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/1.png' }
     ]
   },
 
