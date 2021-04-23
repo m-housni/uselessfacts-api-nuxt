@@ -22,6 +22,10 @@ export default {
     ]
   },
 
+  router: {
+    base: '/uselessfacts-api-nuxt/'
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -29,6 +33,11 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
+
+  // Allows page refresh to work on github pages
+  generate: {
+    fallback: "404.html"
+  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
