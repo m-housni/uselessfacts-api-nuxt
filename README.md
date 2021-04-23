@@ -1,4 +1,15 @@
-# randomfacts-api
+# RandomfactsApi
+
+https://uselessfacts.jsph.pl/
+
+## Api Endpoints
+
+- /random.format?language=lg 
+- /today.format?language=lg
+
+Where 
+- format: json, html, txt and md (default is html)
+- lg: en, de
 
 ## Build Setup
 
